@@ -68,17 +68,30 @@
             <section class="contenedor-formulario">
                 <form action="https://formspree.io/f/xwkdwrwz" method="POST" target="_blank">
                     <fieldset>
-                        <div class="form-contenedor-nombre-apellido">
-                            <input class="form-nombre" size="10" name="nombre" placeholder=" Nombre" required>
-                            <input class="form-apellido" size="10" type="text" name="apellido" placeholder=" Apellido" required>
-                        </div>
-                        <div >
-                            <input size="10" type="email" name="email" placeholder=" Correo" required>
-                        </div>
-                        
-                        <br>
-                        <input class="btn-borrar" type="submit" value="Borrar" id="btn-borrar">
-                        <input class="btn-resumen" type="submit" value="Resumen" id="btn-resumen">
+                            <input class="form-nombre" size="25" type="text" name="nombre" placeholder="Nombre" required>
+                            <input class="form-apellido" size="25" type="text" name="apellido" placeholder="Apellido" required>
+                            <div class="space1"></div>
+                            <input class="form-email" size="10" type="email" name="email" placeholder=" Correo" required>
+                            <div class="space1"></div>
+                            
+                            <!-- <div class="space1"></div> -->
+                            <!-- Poner label e input en un contenedor y otro tambien -->
+                                <div class="form-cantidad">
+                                    <label for="cantidad">Cantidad</label><br>
+                                    <input type="number" name="cantidad" placeholder="Cantidad" min="1" required>
+                                </div>
+                                <div class="form-categoria">
+                                    <label for="categoria">Categoria</label><br>
+                                    <select name="categoria" id="categoria" aria-placeholder="Estudiante">
+                                        <option value="estudiante">Estudiante</option>
+                                        <option value="trainee">Trainee</option>
+                                        <option value="junior">Junior</option>
+                                    </select>
+                                </div>
+                                <div class="space1"></div>
+
+                            <input class="btn-borrar" type="submit" value="Borrar" id="btn-borrar">
+                            <input class="btn-resumen" type="submit" value="Resumen" id="btn-resumen">
                     </fieldset>
             </section>
         </section>

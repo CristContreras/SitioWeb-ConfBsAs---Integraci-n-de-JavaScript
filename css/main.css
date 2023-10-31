@@ -701,7 +701,7 @@ footer nav ul li a {
     background-color: #353a40;
     width: 100%;
 }
-
+/* 
 .form-nombre{
     width: 50%;
     height: 2.5em;
@@ -709,6 +709,37 @@ footer nav ul li a {
 .form-apellido{
     width: 50%;
     height: 2.5em;
+} */
+
+
+.form-contenedor-nombre-apellido{
+    /* display: flex; */
+}
+
+.form-nombre, .form-apellido, .form-email{
+    width: 49%;
+    height: 2.5em;
+}
+
+.form-apellido{
+    float: right;
+}
+
+.form-email{
+    width: 100%;
+}
+
+.space1{
+    height: 1em;
+}
+
+.form-cantidad{
+    background-color: red;
+    display: inline-block;
+}
+.form-categoria{
+    background-color: green;
+    display: inline-block;
 }
 
 
