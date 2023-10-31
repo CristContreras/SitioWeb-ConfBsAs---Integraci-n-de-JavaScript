@@ -617,13 +617,8 @@ footer nav ul li a {
 
 /******* Página ComprarTicket *******/
 
-.contenedor-principal{
-    
-    
-}
-
 .contenedor-secundario{
-    background-color: green;
+    /* background-color: green; */
     width: 57%;
     align-items: center;
     display: flex;
@@ -634,8 +629,7 @@ footer nav ul li a {
 .contenedor-tarjetas-descuentos{
     display: flex;
     justify-content: space-between;
-    background-color: #007bff;
-    /* width: 5em; */
+    /* background-color: #007bff; */
     width: 100%;
     
 }
@@ -645,7 +639,6 @@ footer nav ul li a {
     width: 15em;
     background-color: white;
     text-align: center;
-    /* margin-left: 10px; */
 }
 
 #estudiante{
@@ -698,23 +691,12 @@ footer nav ul li a {
 }
 
 .contenedor-formulario{
-    background-color: #353a40;
+    /* background-color: #353a40; */
     width: 100%;
 }
-/* 
-.form-nombre{
-    width: 50%;
-    height: 2.5em;
-}
-.form-apellido{
-    width: 50%;
-    height: 2.5em;
-} */
 
 
-.form-contenedor-nombre-apellido{
-    /* display: flex; */
-}
+
 
 .form-nombre, .form-apellido, .form-email{
     width: 49%;
@@ -733,13 +715,52 @@ footer nav ul li a {
     height: 1em;
 }
 
-.form-cantidad{
-    background-color: red;
+.contenedor-form-cantidad{
+    /* background-color: red; */
     display: inline-block;
+    width: 49%;
 }
-.form-categoria{
-    background-color: green;
-    display: inline-block;
+.contenedor-form-categoria{
+    /* background-color: green; */
+    float: right;
+    width: 49%;
+
+}
+
+.form-cantidad, .form-categoria{
+    width: 100%;
+    height: 2.5em;
+    margin-top: 0.5em;
+}
+
+.total-pagar{
+    height: 2.5em;
+    background-color: #cce5ff;
+    border-radius: 5px;
+    /* background-color: transparent; */
+    /* color: white; */
+    /* border: 2px solid white; */
+    padding: 4%;
+}
+
+.total-pagar p{
+    position: relative;
+    bottom: 0.8em;
+    right: 2em;
+    font: bold;
+    color: #4240a5;
+}
+
+.btn-borrar, .btn-resumen{
+    border-radius: 5px;
+    background-color: #97c93e;
+    color: white;
+    border: 2px solid #97c93e;
+    padding: 1%;
+    width: 49%;
+}
+.btn-resumen{
+    float: right;
 }
 
 
