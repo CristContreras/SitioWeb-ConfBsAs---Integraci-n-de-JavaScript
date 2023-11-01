@@ -8,19 +8,115 @@
 </head>
 
 <body>
-    <h1>Lorem ipsum dolor, sit is sunt nisi.</h1>
-    <img src="https://picsum.photos/200/300
-                            " alt="">
+    <div class="contenedor-form-cantidad">
+        <label for="cantidad">Cantidad</label><br>
+        <input id="cantidad" for="cantidad" class="form-cantidad" type="number" name="cantidad"
+            placeholder="cantidad" min="1" required>
+    </div>
+    <select class="form-categoria" name="categoria" id="categoria" aria-placeholder="Estudiante">
+        <option value="selección">Seleccione</option>
+        <option value="estudiante">Estudiante</option>
+        <option value="trainee">Trainee</option>
+        <option value="junior">Junior</option>
+    </select>
+    <p id="precio">Precio: </p>
 </body>
-<style>
-    h1 {
-        font-size: 1em;
+<script>
+    //variables globales
+    let valorTicket = 200;
+    let descuentoEstudiante = 80;
+    let descuentoTrainee = 50;
+    let descuentoJunior = 15;
+    let calculoDescuento = 0;
+    let valorConDescuento = 0;
+    let cantidadPersonas=0;
+    let hacerUnaVez = true;
+
+    let auxiliarNumero=0;
+    let auxiliarNumero2=0;
+    let resultado=0;
+
+    // var precioFinal=document.getElementById("precio");
+    // precioFinal.innerHTML = "Precio $880";
+
+    var numero = document.getElementById("cantidad");
+    numero.addEventListener("change", function () {
+        var numeroActual=numero.value;
+        if (numeroActual > 0) {
+            console.log(numeroActual);
+            
+            // cantidadPersonas+=parseInt(numero.value);
+            // console.log((cantidadPersonas));
+        }
+    });
+
+
+
+    function calculoPrecio() {
+        var select = document.getElementById("categoria");
+        select.addEventListener("change", function () {
+            var opcionSeleccionada = select.value;
+            switch (opcionSeleccionada) {
+                case "estudiante":
+                    calculoDescuento = (80 * valorTicket) / 100;
+                    valorConDescuento = (valorTicket - calculoDescuento) * cantidadPersonas;
+                    alert("Precio despues del descuento: " + "$" + valorConDescuento);
+                    break;
+                case "trainee":
+                    calculoDescuento = (50 * valorTicket) / 100;
+                    valorConDescuento = (valorTicket - calculoDescuento) * cantidadPersonas;
+                    alert("Precio despues del descuento: " + "$" + valorConDescuento);
+                    break;
+                case "junior":
+                    calculoDescuento = (15 * valorTicket) / 100;
+                    valorConDescuento = (valorTicket - calculoDescuento) * cantidadPersonas;
+                    alert("Precio despues del descuento: " + "$" + valorConDescuento);
+                    break;
+            }
+        });
     }
 
-    img {
-        height: 600px;
-        width: 75em;
-    }
-</style>
+
+
+    // alert("hola, mundo");
+    // let nombre="Cristian";
+    // let letra='C';
+    // alert(nombre);
+    // alert(letra);
+    // var variableglobal=20;
+    // alert(variableglobal);
+    // let texto="Hola mundo";
+    // let textoMayuscula = texto.toUpperCase();
+    // console.log(textoMayuscula);
+    // let textoHTML=document.getElementById("h1");
+    // textoHTML.innerHTML= textoHTML.innerHTML.repeat(5);
+    // function saludar(){
+    //     let saludo="Good afternoon";
+    //     console.log(saludo);
+    //     var newElement=document.createElement("h1");
+    //     newElement.textContent="Good Afternoon";
+    //     document.body.appendChild(newElement);
+    //     alert(saludo);
+    // }
+    // var saludar=function(){
+    //     alert('funcion  expression');
+    // }
+    // saludar();
+    // var suma=function(){
+    //     var num1=3;
+    //     var num2=2;
+    //     return alert(num1+num2);
+    // }
+    // suma();
+
+    // function suma(){
+    //     var num1=3;
+    //     var num2=2;
+    //     return num1+num2;
+    // }
+
+    // suma();
+
+</script>
 
 </html>
