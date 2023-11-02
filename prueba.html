@@ -10,8 +10,8 @@
 <body>
     <div class="contenedor-form-cantidad">
         <label for="cantidad">Cantidad</label><br>
-        <input id="cantidad" for="cantidad" class="form-cantidad" type="number" name="cantidad"
-            placeholder="cantidad" min="1" required>
+        <input id="cantidad" for="cantidad" class="form-cantidad" type="number" name="cantidad" placeholder="cantidad"
+            min="1" required>
     </div>
     <select class="form-categoria" name="categoria" id="categoria" aria-placeholder="Estudiante">
         <option value="selección">Seleccione</option>
@@ -19,62 +19,74 @@
         <option value="trainee">Trainee</option>
         <option value="junior">Junior</option>
     </select>
-    <p id="precio">Precio: </p>
+    <p id="totalPagar">Precio: </p>
 </body>
 <script>
     //variables globales
-    let valorTicket = 200;
-    let descuentoEstudiante = 80;
-    let descuentoTrainee = 50;
-    let descuentoJunior = 15;
-    let calculoDescuento = 0;
-    let valorConDescuento = 0;
-    let cantidadPersonas=0;
-    let hacerUnaVez = true;
+    const valorTicket = 200;
+    const descuentoEstudiante = 80;
+    const descuentoTrainee = 50;
+    const descuentoJunior = 15;
+    let precioFinal;
+    let catSeleccionada;
 
-    let auxiliarNumero=0;
-    let auxiliarNumero2=0;
-    let resultado=0;
+    var elementPrecio = document.getElementById("totalPagar");
 
-    // var precioFinal=document.getElementById("precio");
-    // precioFinal.innerHTML = "Precio $880";
+    var elementCategoria = document.getElementById("categoria");
 
-    var numero = document.getElementById("cantidad");
-    numero.addEventListener("change", function () {
-        var numeroActual=numero.value;
-        if (numeroActual > 0) {
-            console.log(numeroActual);
-            
-            // cantidadPersonas+=parseInt(numero.value);
-            // console.log((cantidadPersonas));
-        }
-    });
+    var elementCantidad = document.getElementById("cantidad");
+
+    elementCantidad.addEventListener("input", function () {
+        console.log(elementCantidad.value);
+        var cantidadPersonas = elementCantidad.value;
+        if (cantidadPersonas > 0) {
+            //muestra numero actual en consola
+            // console.log(cantidadPersonas);
+            catSeleccionada = elementCategoria.value;
+            if (catSeleccionada != "selección") {
+                switch (catSeleccionada) {
+                    case "estudiante":
+                        precioFinal = calcularPrecio(cantidadPersonas, descuentoEstudiante, catSeleccionada)
+                        // alert("Precio final: " + precioFinal);
+                        elementPrecio.innerHTML = " Total a Pagar: $" + precioFinal;
+                        // console.log("Precio final: " + precioFinal);
+                        break;
+                }
+            } else {
+
+                categoria.addEventListener("input", function () {
+                    catSeleccionada = elementCategoria.value;
+
+                    // if (catSeleccionada != "selección") {
+                    switch (catSeleccionada) {
+                        case "estudiante":
+                            precioFinal = calcularPrecio(cantidadPersonas, descuentoEstudiante, catSeleccionada)
+                            // alert("Precio final: " + precioFinal);
+                            elementPrecio.innerHTML = " Total a Pagar: $" + precioFinal;
+
+                            // console.log("Precio final: " + precioFinal);
+
+                            break;
+                    }
 
 
-
-    function calculoPrecio() {
-        var select = document.getElementById("categoria");
-        select.addEventListener("change", function () {
-            var opcionSeleccionada = select.value;
-            switch (opcionSeleccionada) {
-                case "estudiante":
-                    calculoDescuento = (80 * valorTicket) / 100;
-                    valorConDescuento = (valorTicket - calculoDescuento) * cantidadPersonas;
-                    alert("Precio despues del descuento: " + "$" + valorConDescuento);
-                    break;
-                case "trainee":
-                    calculoDescuento = (50 * valorTicket) / 100;
-                    valorConDescuento = (valorTicket - calculoDescuento) * cantidadPersonas;
-                    alert("Precio despues del descuento: " + "$" + valorConDescuento);
-                    break;
-                case "junior":
-                    calculoDescuento = (15 * valorTicket) / 100;
-                    valorConDescuento = (valorTicket - calculoDescuento) * cantidadPersonas;
-                    alert("Precio despues del descuento: " + "$" + valorConDescuento);
-                    break;
+                })
             }
-        });
+
+
+        }
+    })
+
+
+  
+
+    function calcularPrecio(cantPersonas, cantidadDescuento, catSeleccionada) {
+        let descuento = (cantidadDescuento * valorTicket) / 100;
+        precioFinal = (valorTicket - descuento) * cantPersonas;
+        return precioFinal;
     }
+
+
 
 
 

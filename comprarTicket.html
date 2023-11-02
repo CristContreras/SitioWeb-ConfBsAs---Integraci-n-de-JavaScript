@@ -83,13 +83,14 @@
                         <!-- Poner label e input en un contenedor y otro tambien -->
                         <div class="contenedor-form-cantidad">
                             <label for="cantidad">Cantidad</label><br>
-                            <input class="form-cantidad" type="number" name="cantidad" placeholder=" Cantidad" min="1"
+                            <input id="cantidad" class="form-cantidad" type="number" name="cantidad" placeholder=" Cantidad" min="1"
                                 required>
                         </div>
                         <div class="contenedor-form-categoria">
                             <label for="categoria">Categoria</label><br>
                             <select class="form-categoria" name="categoria" id="categoria"
                                 aria-placeholder="Estudiante">
+                                <option value="selección">Seleccione</option>
                                 <option value="estudiante">Estudiante</option>
                                 <option value="trainee">Trainee</option>
                                 <option value="junior">Junior</option>
@@ -99,7 +100,7 @@
                         <div class="space1"></div>
 
                         <div class="total-pagar">
-                            <p>Total a Pagar: $</p>
+                            <p id="totalPagar">Total a Pagar: $</p>
                         </div>
                         <div class="space1"></div>
                         <div class="space1"></div>
@@ -127,6 +128,8 @@
             </ul>
         </nav>
     </footer>
+    <script src="js/main.js"></script>
 </body>
+
 
 </html>
