@@ -8,126 +8,13 @@
 </head>
 
 <body>
-    <div class="contenedor-form-cantidad">
-        <label for="cantidad">Cantidad</label><br>
-        <input id="cantidad" for="cantidad" class="form-cantidad" type="number" name="cantidad" placeholder="cantidad"
-            min="1" required>
-    </div>
-    <select class="form-categoria" name="categoria" id="categoria" aria-placeholder="Estudiante">
-        <option value="selección">Seleccione</option>
-        <option value="estudiante">Estudiante</option>
-        <option value="trainee">Trainee</option>
-        <option value="junior">Junior</option>
-    </select>
-    <p id="totalPagar">Precio: </p>
+   
 </body>
+<style>
+   
+</style>
 <script>
-    //variables globales
-    const valorTicket = 200;
-    const descuentoEstudiante = 80;
-    const descuentoTrainee = 50;
-    const descuentoJunior = 15;
-    let precioFinal;
-    let catSeleccionada;
-
-    var elementPrecio = document.getElementById("totalPagar");
-
-    var elementCategoria = document.getElementById("categoria");
-
-    var elementCantidad = document.getElementById("cantidad");
-
-    elementCantidad.addEventListener("input", function () {
-        console.log(elementCantidad.value);
-        var cantidadPersonas = elementCantidad.value;
-        if (cantidadPersonas > 0) {
-            //muestra numero actual en consola
-            // console.log(cantidadPersonas);
-            catSeleccionada = elementCategoria.value;
-            if (catSeleccionada != "selección") {
-                switch (catSeleccionada) {
-                    case "estudiante":
-                        precioFinal = calcularPrecio(cantidadPersonas, descuentoEstudiante, catSeleccionada)
-                        // alert("Precio final: " + precioFinal);
-                        elementPrecio.innerHTML = " Total a Pagar: $" + precioFinal;
-                        // console.log("Precio final: " + precioFinal);
-                        break;
-                }
-            } else {
-
-                categoria.addEventListener("input", function () {
-                    catSeleccionada = elementCategoria.value;
-
-                    // if (catSeleccionada != "selección") {
-                    switch (catSeleccionada) {
-                        case "estudiante":
-                            precioFinal = calcularPrecio(cantidadPersonas, descuentoEstudiante, catSeleccionada)
-                            // alert("Precio final: " + precioFinal);
-                            elementPrecio.innerHTML = " Total a Pagar: $" + precioFinal;
-
-                            // console.log("Precio final: " + precioFinal);
-
-                            break;
-                    }
-
-
-                })
-            }
-
-
-        }
-    })
-
-
-  
-
-    function calcularPrecio(cantPersonas, cantidadDescuento, catSeleccionada) {
-        let descuento = (cantidadDescuento * valorTicket) / 100;
-        precioFinal = (valorTicket - descuento) * cantPersonas;
-        return precioFinal;
-    }
-
-
-
-
-
-    // alert("hola, mundo");
-    // let nombre="Cristian";
-    // let letra='C';
-    // alert(nombre);
-    // alert(letra);
-    // var variableglobal=20;
-    // alert(variableglobal);
-    // let texto="Hola mundo";
-    // let textoMayuscula = texto.toUpperCase();
-    // console.log(textoMayuscula);
-    // let textoHTML=document.getElementById("h1");
-    // textoHTML.innerHTML= textoHTML.innerHTML.repeat(5);
-    // function saludar(){
-    //     let saludo="Good afternoon";
-    //     console.log(saludo);
-    //     var newElement=document.createElement("h1");
-    //     newElement.textContent="Good Afternoon";
-    //     document.body.appendChild(newElement);
-    //     alert(saludo);
-    // }
-    // var saludar=function(){
-    //     alert('funcion  expression');
-    // }
-    // saludar();
-    // var suma=function(){
-    //     var num1=3;
-    //     var num2=2;
-    //     return alert(num1+num2);
-    // }
-    // suma();
-
-    // function suma(){
-    //     var num1=3;
-    //     var num2=2;
-    //     return num1+num2;
-    // }
-
-    // suma();
+    
 
 </script>
 

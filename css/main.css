@@ -34,7 +34,6 @@ header {
     display: none;
 }
 
-.logo {}
 
 .logo a {
     display: flex;
@@ -763,4 +762,46 @@ footer nav ul li a {
     float: right;
 }
 
+/* Estilo boton resumen */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    text-align: center;
+}
 
+.modal-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cerrar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#resumenDetalle{
+    text-align: left;
+}
+
+.centrarTitulo{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.3em;
+    
+}

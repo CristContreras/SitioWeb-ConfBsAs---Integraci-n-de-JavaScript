@@ -69,14 +69,14 @@
             </section>
             <br>
             <section class="contenedor-formulario">
-                <form action="https://formspree.io/f/xwkdwrwz" method="POST" target="_blank">
+                <form action="about:blank" method="POST" target="_blank" id="formulario">
                     <fieldset>
-                        <input class="form-nombre" size="25" type="text" name="nombre"
+                        <input id="nombre" class="form-nombre" size="25" type="text" name="nombre"
                             placeholder=" Nombre" required>
-                        <input class="form-apellido" size="25" type="text" name="apellido" placeholder=" Apellido"
+                        <input id="apellido" class="form-apellido" size="25" type="text" name="apellido" placeholder=" Apellido"
                             required>
                         <div class="space1"></div>
-                        <input class="form-email" size="10" type="email" name="email" placeholder=" Correo" required>
+                        <input id="email" class="form-email" size="10" type="email" name="email" placeholder=" Correo" required>
                         <div class="space1"></div>
                         
                         <!-- <div class="space1"></div> -->
@@ -89,8 +89,8 @@
                         <div class="contenedor-form-categoria">
                             <label for="categoria">Categoria</label><br>
                             <select class="form-categoria" name="categoria" id="categoria"
-                                aria-placeholder="Estudiante">
-                                <option value="selección">Seleccione</option>
+                              required>
+                                <option value="">Seleccione</option>
                                 <option value="estudiante">Estudiante</option>
                                 <option value="trainee">Trainee</option>
                                 <option value="junior">Junior</option>
@@ -106,13 +106,22 @@
                         <div class="space1"></div>
 
 
-                        <input class="btn-borrar" type="submit" value="Borrar" id="btn-borrar">
-                        <input class="btn-resumen" type="submit" value="Resumen" id="btn-resumen">
+                        <input class="btn-borrar" type="reset" value="Borrar" id="btn-borrar">
+                        <input id="btn-resumen" class="btn-resumen" type="submit" value="Resumen" id="btn-resumen">
                     </fieldset>
+                </form>
             </section>
         </section>
         <br> <!--modificar-->
+        <!-- <button id="mostrarBoton">Mostrar Diálogo</button> -->
 
+        <div id="miModal" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" id="cerrarModal">&times;</span>
+                <p id="resumenDetalle"></p>
+                
+            </div>
+        </div>
     </main>
 
     <footer>
