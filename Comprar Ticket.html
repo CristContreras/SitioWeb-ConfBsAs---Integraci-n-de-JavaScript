@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferencia Bs. As</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/Comprar Ticket.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="icon" href="img/icono.ico">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title>Conferencia Bs. As</title>
-
-        <link rel="stylesheet" href="css/main.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-        <link rel="icon" href="img/icono.ico">
-    </head>
 </head>
 
 <body>
@@ -31,11 +28,11 @@
         <input type="checkbox" class="menu-toggle" id="menu-toggle">
         <nav class="menu" class="nav" id="nav">
             <ul class="nav-list">
-                <li><a href="#">La conferencia</a></li>
-                <li><a href="#losOradores">Los oradores</a></li>
-                <li><a href="#lugarFecha">El lugar y fecha</a></li>
-                <li><a href="#seOrador">Conviertete en orador</a></li>
-                <li><a href="#" class="menuItemColorGreen">Comprar tickets</a></li>
+                <li><a href="index.html">La conferencia</a></li>
+                <li><a href="index.html#losOradores">Los oradores</a></li>
+                <li><a href="index.html#lugarFecha">El lugar y fecha</a></li>
+                <li><a href="index.html#seOrador">Conviertete en orador</a></li>
+                <li><a href="Comprar Ticket.html" style="color: #168651;">Comprar tickets</a></li>
             </ul>
         </nav>
     </header>
@@ -71,25 +68,25 @@
             <section class="contenedor-formulario">
                 <form action="about:blank" method="POST" target="_blank" id="formulario">
                     <fieldset>
-                        <input id="nombre" class="form-nombre" size="25" type="text" name="nombre"
-                            placeholder=" Nombre" required>
-                        <input id="apellido" class="form-apellido" size="25" type="text" name="apellido" placeholder=" Apellido"
+                        <input id="nombre" class="form-nombre" size="25" type="text" name="nombre" placeholder=" Nombre"
+                            required>
+                        <input id="apellido" class="form-apellido" size="25" type="text" name="apellido"
+                            placeholder=" Apellido" required>
+                        <div class="space1"></div>
+                        <input id="email" class="form-email" size="10" type="email" name="email" placeholder=" Correo"
                             required>
                         <div class="space1"></div>
-                        <input id="email" class="form-email" size="10" type="email" name="email" placeholder=" Correo" required>
-                        <div class="space1"></div>
-                        
+
                         <!-- <div class="space1"></div> -->
                         <!-- Poner label e input en un contenedor y otro tambien -->
                         <div class="contenedor-form-cantidad">
                             <label for="cantidad">Cantidad</label><br>
-                            <input id="cantidad" class="form-cantidad" type="number" name="cantidad" placeholder=" Cantidad" min="1"
-                                required>
+                            <input id="cantidad" class="form-cantidad" type="number" name="cantidad"
+                                placeholder=" Cantidad" min="1" required>
                         </div>
                         <div class="contenedor-form-categoria">
                             <label for="categoria">Categoria</label><br>
-                            <select class="form-categoria" name="categoria" id="categoria"
-                              required>
+                            <select class="form-categoria" name="categoria" id="categoria" required>
                                 <option value="">Seleccione</option>
                                 <option value="estudiante">Estudiante</option>
                                 <option value="trainee">Trainee</option>
@@ -119,7 +116,7 @@
             <div class="modal-contenido">
                 <span class="cerrar" id="cerrarModal">&times;</span>
                 <p id="resumenDetalle"></p>
-                
+
             </div>
         </div>
     </main>
@@ -140,5 +137,16 @@
     <script src="js/main.js"></script>
 </body>
 
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.querySelector(".menu");
 
+    menuToggle.addEventListener("change", function () {
+        if (menuToggle.checked) {
+            menu.classList.add("active");
+        } else {
+            menu.classList.remove("active");
+        }
+    });
+</script>
 </html>

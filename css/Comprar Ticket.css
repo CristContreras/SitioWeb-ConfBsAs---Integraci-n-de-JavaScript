@@ -1,0 +1,247 @@
+/******* Página ComprarTicket *******/
+
+.contenedor-secundario{
+    /* background-color: green; */
+    width: 57%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.contenedor-tarjetas-descuentos{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #007bff; */
+    width: 100%;
+    
+}
+
+.una-tarjeta-descuento{
+    height: 15em;
+    width: 15em;
+    background-color: white;
+    text-align: center;
+}
+
+#estudiante{
+    color: black;
+    border: 1.5px solid #007bff;
+    
+}
+#trainee{
+    color: black;
+    border: 1.5px solid #17a2b8;
+}
+#junior{
+    color: black;
+    border: 1.5px solid #ffc107;
+}
+
+.una-tarjeta-descuento h2, p{
+    margin: 1em;
+}
+
+.una-tarjeta-descuento 
+
+.porcentaje{
+    font-weight: bold;
+}
+
+.una-tarjeta-descuento h2{
+    font-size: 1.5em;
+}
+
+.tiene-descuento-texto{
+    font-size: 1.2em;
+}
+
+.presentar-doc-texto{
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+
+.contenedor-titulo-ticket{
+    background-color: white;
+    text-align: center;
+    
+}
+
+#titulo-valor-ticket{
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.contenedor-formulario{
+    /* background-color: #353a40; */
+    width: 100%;
+}
+
+
+
+
+.form-nombre, .form-apellido, .form-email{
+    width: 49%;
+    height: 2.5em;
+}
+
+.form-apellido{
+    float: right;
+}
+
+.form-email{
+    width: 100%;
+}
+
+.space1{
+    height: 1em;
+}
+
+.contenedor-form-cantidad{
+    /* background-color: red; */
+    display: inline-block;
+    width: 49%;
+}
+.contenedor-form-categoria{
+    /* background-color: green; */
+    float: right;
+    width: 49%;
+
+}
+
+.form-cantidad, .form-categoria{
+    width: 100%;
+    height: 2.5em;
+    margin-top: 0.5em;
+}
+
+.total-pagar{
+    height: 2.5em;
+    background-color: #cce5ff;
+    border-radius: 5px;
+    padding: 4%;
+}
+
+.total-pagar p{
+    position: relative;
+    bottom: 0.8em;
+    right: 2em;
+    font: bold;
+    color: #4240a5;
+}
+
+.btn-borrar, .btn-resumen{
+    border-radius: 5px;
+    background-color: #97c93e;
+    color: white;
+    border: 2px solid #97c93e;
+    padding: 1%;
+    width: 49%;
+}
+.btn-resumen{
+    float: right;
+}
+
+/* Estilo boton resumen */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    text-align: center;
+}
+
+.modal-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cerrar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#resumenDetalle{
+    text-align: left;
+}
+
+.centrarTitulo{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.3em;
+    
+}
+
+@media (max-width: 767px) {
+
+
+    .contenedor-secundario {
+        width: 70%;
+    }
+
+    .contenedor-tarjetas-descuentos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .una-tarjeta-descuento {
+        margin-top: 1em;
+        width: 100%;
+    }
+
+
+
+    .form-nombre,
+    .form-apellido,
+    .contenedor-form-cantidad,
+    .form-cantidad,
+    .contenedor-form-categoria,
+    .form-categoria {
+        width: 100%;
+    }
+
+    .contenedor-form-categoria,
+    .form-apellido {
+        margin-top: 1em;
+    }
+
+    .total-pagar p {
+        position: relative;
+        top: 0;
+        right: 4em;
+    }
+
+    .btn-borrar {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .btn-resumen {
+        width: 100%;
+    }
+
+    .modal-contenido {
+        width: 80%;
+    }
+
+    .menu {
+        position: absolute;
+
+    }
+}
